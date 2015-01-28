@@ -1,0 +1,13 @@
+<h1>Our Dummy Login App</h1>
+<% unless session[:user].nil? %>
+Hi, <%= session[:user].full_name %>
+<%end%>
+<form action="/login" method="post">
+EMAIL:    <input type="text" name="user[email]"><br>
+PASSWORD: <input type="password" name="user[password]">
+  <input type="submit" value="login">
+</form>
+
+<br>
+<a href="/signup">SIGN-UP!</a>
+
